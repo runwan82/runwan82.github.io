@@ -1,0 +1,12 @@
+
+p{font-size:11pt;}
+td{font-size:10pt;color:white}
+font{color:white;}
+h3{color:white;}
+a:visited {color:gray;}
+.fs_11{font-size:11pt;}
+#join:hover {background-color: darkgray;}
+#login:hover {background-color: darkgray;}
+#back:hover {background-color: darkgray;}
+#forward:hover {background-color: darkgray;}
+a { text-decoration:none; color:white} 

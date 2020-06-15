@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script language="javascript" src="js/script.js">
+		window.location="no";
+	</script>
+	<style>
+		td{color:black;font-size:10pt;}
+		caption{font-size:15pt;font-family:휴먼매직체;}
+		.bgc_1{background-color:#ffcccc;} 
+	</style>
+	<title>joining</title>
+</head>
+<body>
+	<form name="frm">
+	<table border=1 width=375 height=360 bordercolor="black" cellspacing=0>
+	<caption>회원가입 신청서</caption>
+		<tr>
+			<td class="bgc_1">&nbsp;이름</td>
+			<td><input type="text" name="_name" size=10></td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;주민등록번호</td>
+			<td><input type="text" name="f_num" size=8 maxlength=6 onchange="joining_check(frm, 0, 6, this)"> -
+				<input type="text" name="b_num" size=8 maxlength=7 onchange="joining_check(frm, 0, 7, this)"></td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;성별</td>
+			<td><input type="radio" name="man"> 남자 <input type="radio" name="women"> 여자</td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;아이디</td>
+			<td><input type="text" name="_id" size=8 maxlength=8>&nbsp;
+			<input type="button" name="re_name" value="중복확인" onclick="joining_check(frm, 1, 4)">&nbsp;4~8자리까지</td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;비밀번호</td>
+			<td><input type="password" name="passwd" size=8 maxlength=9 onchange="joining_check(frm, 2, 4)">&nbsp;숫자,영문 4~9자리까지</td>
+		</tr>
+		<tr>
+			<td class="bgc_1" width=100>&nbsp;비밀번호 확인</td>
+			<td><input type="password" name="re_passwd" size=8 maxlength=9 onchange="joining_check(frm, 2, 4)"></td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;핸드폰번호</td>
+			<td><input type="text" name="p_number" onchange="joining_check(frm, 3)">&nbsp;- 생략</td>
+		</tr>
+		<tr>
+			<td class="bgc_1">&nbsp;e-mail</td>
+			<td><input type="text" name="mail" size=25 onchange="joining_check(frm, 4)"></td>
+		</tr>
+		<tr>
+			<td class="bgc_1"><center>하고싶은말</center></td>
+			<td><textarea name="agreement" rows="3" cols="33"></textarea></td>
+		</tr>
+		<tr>
+		<td colspan=2 align=center>
+			<input type="button" name="joining" value="가입" onclick="joining_check(frm, 5)">&nbsp;
+			<input type="reset" name="re_draw" value="재작성">&nbsp;
+			<input type="button" name="cansle" value="취소" onclick="window.close()">
+		</td>
+		</tr>
+	</table>
+	</form>
+	</body>
+</html>
